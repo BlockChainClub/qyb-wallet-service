@@ -19,6 +19,24 @@ var config = {
   // CAinter2: '', // ex. 'COMODORSAAddTrustCA.crt'
   // CAroot: '', // ex. 'AddTrustExternalCARoot.crt'
 
+  // @empty add for luckymoney server wallet
+  luckymoneyOpts:{
+    walletOpts:{
+      name: 'luckymoney server wallet',
+      m: 1,
+      n: 1,
+      pubKey: '026092daeed8ecb2212869395770e956ffc9bf453f803e700f64ffa70c97a00d80',
+      singleAddress: false,
+      coin: 'btc',
+    }
+  },
+  wechatConfig:{
+    //set your oauth redirect url, defaults to localhost
+    "wechatRedirectUrl": "http://luckymoney.let5see.xyz/bws/api/luckymoney/scramble/",
+    //"wechatToken": "wechat_token", //not necessary required
+    "appId": "wxf113fb4694aa7496",
+    "appSecret": "d8ed1f49fd2afd3f625c23b0bb305622",
+  },
   storageOpts: {
     mongoDb: {
       uri: 'mongodb://localhost:27017/bws',

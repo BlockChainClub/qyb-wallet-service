@@ -1,0 +1,322 @@
+<html style="font-size:100px" class="webp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>{{title}}</title>
+    <script>(function () {
+        var browser = navigator.appName;
+        var b_version = navigator.appVersion;
+        var version = b_version.split(";");
+        var trim_Version = version[1].replace(/[ ]/g, "");
+        let explorerTag = sessionStorage.getItem('explorerTag') || '';
+
+        function addWebp() {
+            var htmlClass = document.documentElement.className;
+            if (htmlClass) {
+                document.documentElement.className += ' webp';
+            } else {
+                document.documentElement.className = "webp";
+            }
+        }
+
+        function detect() {
+            var WebP = new Image();
+            WebP.onload = WebP.onerror = function () {
+                if (WebP.height != 2) {
+                    window.localStorage.setItem('webp', 0);
+                } else {
+                    window.localStorage.setItem('webp', 1);
+                }
+            };
+            WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+        }
+
+        if (typeof window.localStorage !== 'undefined') {
+            if (window.localStorage.getItem('webp') === '1') {
+                addWebp();
+            } else {
+                detect();
+            }
+        }
+    })();</script>
+    <link rel="stylesheet" href="http://huodong.goopal1.com/css/common_a07899.css">
+    <link rel="stylesheet" href="http://huodong.goopal1.com/css/redpacket_ab965f.css">
+    <style type="text/css">
+        .packet-header {
+            background-color: #f0f0f0;
+            padding-bottom: .25rem;
+            margin-top: -.15rem;
+            overflow-x: hidden;
+        }
+
+        .packet-header .red-arc {
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: 115%;
+            height: 1.96rem;
+            margin-top: -.96rem;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            background-color: #cf3a3f;
+        }
+
+        .packet-header .red-top {
+            position: relative;
+            width: 100%;
+            height: 1rem;
+        }
+
+        .packet-header .red-top-wx {
+            height: 1.4rem;
+        }
+
+        .packet-header .red-arc-wx {
+            margin-top: -.56rem;
+        }
+
+        .packet-header .user-logo {
+            position: relative;
+            width: .57rem;
+            height: .57rem;
+            border-radius: 50%;
+            margin: -.285rem auto .13rem;
+            z-index: 99;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .packet-header .user-logo-img {
+            display: block;
+            width: .57rem;
+            height: .57rem;
+        }
+
+        .packet-header .user-logo-letter {
+            font-size: .22rem;
+            line-height: .59rem;
+            color: #fff;
+            background-color: #cab088;
+        }
+
+        .packet-header .packet-user,
+        .packet-header .packet-slogan {
+            text-align: center;
+            color: #333;
+            line-height: 1;
+        }
+
+        .packet-header .packet-user {
+            font-size: .14rem;
+            margin-bottom: .15rem;
+        }
+
+        .packet-header .packet-slogan {
+            font-size: .15rem;
+        }
+    </style>
+    <style type="text/css">
+        .alert {
+            position: fixed;
+            left: 50%;
+            bottom: 45%;
+            line-height: 18px;
+            z-index: 9999999;
+            font-size: 12px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 9px;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            white-space: nowrap;
+            -webkit-transform: translate3d(-50%, 15%, 0);
+            transform: translate3d(-50%, 15%, 0);
+        }
+
+        .tips-fade-enter, .tips-fade-leave-active {
+            opacity: 0;
+            bottom: 25%;
+        }
+
+        .tips-fade-enter-active, .tips-fade-leave-active {
+            transition: all .25s linear;
+        }
+    </style>
+    <style type="text/css">
+        .redpacketlist {
+            background-color: #fff;
+        }
+
+        .redpacketlist-title {
+            height: 41px;
+            line-height: 41px;
+            padding-left: 15px;
+            font-size: 13px;
+            color: #888888;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .redpacketlist-content {
+            margin-left: 15px;
+        }
+
+        .redpacketlist-content .item {
+            height: 63px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .redpacketlist-content .item:last-child {
+            border: none;
+        }
+
+        .redpacketlist-content .item-img {
+            float: left;
+            background: url(./images/avatar_nor@2x_16edf9.png) no-repeat center;
+            background-size: 36px 36px;
+            width: 36px;
+            height: 63px;
+        }
+
+        .redpacketlist-content .item-img-url {
+            float: left;
+            margin-top: 13px;
+            width: 36px;
+            height: 36px;
+            border-radius: 18px;
+        }
+
+        .redpacketlist-content .item-img-text {
+            float: left;
+            border-radius: 18px;
+            width: 36px;
+            height: 36px;
+            margin-top: 13px;
+            text-align: center;
+            line-height: 34px;
+            font-size: 18px;
+            background: #cab088;
+            color: white;
+        }
+
+        .redpacketlist-content .item-name-date {
+            float: left;
+            padding-top: 16px;
+            padding-left: 12px;
+        }
+
+        .redpacketlist-content .item-name-date .name {
+            font-size: 13px;
+            color: #333333;
+        }
+
+        .redpacketlist-content .item-name-date .date {
+            font-size: 12px;
+            color: #888888;
+        }
+
+        .redpacketlist-content .item-num {
+            float: right;
+            font-size: 14px;
+            padding-top: 16px;
+            padding-right: 15px;
+            text-align: right;
+        }
+
+        .redpacketlist-content .item-num .king {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAA0CAYAAAA62j4JAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Qjg4M0FGQ0NEODlCMTFFN0IxNDRBMDlBNjEyNTBDRDkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Qjg4M0FGQ0REODlCMTFFN0IxNDRBMDlBNjEyNTBDRDkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCODgzQUZDQUQ4OUIxMUU3QjE0NEEwOUE2MTI1MENEOSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCODgzQUZDQkQ4OUIxMUU3QjE0NEEwOUE2MTI1MENEOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmdItbMAAAMkSURBVHja3Fo9bxQxEPXOoosQ4ZD4TIQEgQ6EFKAIAdpIkYA/QKCAJiCFAiQ6Ar8iHJQUwP0BqKAHOiCIOkFKk5JUHMUyRnORtdrbtc8zXu8+6UlZr/fmw/Y8e7NJlmVKHB/Pmlcd5H3kTeQ5avuB7CNfIge7PRd+iru2R4XFceQ75Plc+zzxLvIGciuUQxAw+M6I4E3oe++RE21MwL2K4IeYRS63MQFLQn0bk4CLDn0vtDEBLvgbylCSfTgTytYnqvQ2+Iy8HMKpoQyeQD5AXqLrL8g15C9GW32HBPSZ4xwZn54BJ/GPV8j9uYd2kHeQm0xOTJDh2Yp+35FzyD9Mdkvj0zVgpeCmorYVxlHQAV1Hfi3p8w15jTF4VRUfGNOiCPPMU3GL7D1EriMz4jq1zQnsAkvjq0MFBrT+fusiTNyhtkFoZ4DWZVk1lsAT5FXj+gpyVchWaXw6AT0aAVVQJHoCDml5e1bQ/lRI+krj0wnYoGpvYpvaNpid6SLfINOCe7rtLfXhxDC+7Vz7//iGNSAvdUeRiwKj8Rx5quT+jNCsW6SYTGxWbYWXmU9l+oBz26LfLebDUGkc4POwA1xH9gU9Ixq87WHINwl6bb9GHmCqFWzBu5wGfZKQlzxb+Eijtb8g8aMWkmeLcaTRyU8Q/PEuyVrquXxcpNF5kEBwevWYCpltAR1rmYLQGlsiOeNClTSOXaN8DkOjjM6QjHFjlDR6qZTvaTBvPCX56gokoEgavfcpHMdh04lVki8pmNLIsknj+teYduQ08nGAI7yWxr3IBa73ARzQ0/KRp+TVYosrAfqtayfgi5wO2YwiAQeJocFiF2IZibpmnk8CEnq5kdaYgJR8SOpIwBRyUtWPSfIlaAL2IadVPJgmn4IkICXNTyJKQEI+pSESEFryRAuyawLqkjwx/0A6w7FLIzissbolT0QabRMQi+SxS6NNAmKTPFZpBIvpFJvksUojcBaUJkojNFjyWKQRGi553tIIDZc87+07tEDyvA5wUNBpSrUXx/KDC7lpckTF+/0wB3Rsh83lbQarP048pNoPHePu53j/BBgAfCN9sVhrBvQAAAAASUVORK5CYII=) no-repeat;
+            background-size: 16px 13px;
+            height: 13px;
+            font-size: 13px;
+            color: #ffbb29;
+            padding-left: 18px;
+        }
+
+        .redpacketlist-content .item-num .king-zh {
+            line-height: 15px;
+        }
+    </style>
+</head>
+<body>
+<div id="app" class="app">
+    <div id="redpacket" class="redpacket">
+        <div class="packet-header">
+            <div class="red-top red-top-wx">
+                <div class="red-arc red-arc-wx"></div>
+            </div>
+            <div class="user-logo">
+                <img src="http://huodong.goopal1.com/images/avatar_nor@2x_16edf9.png" class="user-logo-img" style="display: none;">
+                <img src="http://huodong.goopal1.com/images/avatar_nor@2x_16edf9.png" class="user-logo-img" style="display: none;">
+                <p class="user-logo-letter">E</p></div>
+                <p class="packet-user">{{data.userinfo.nickname}} 的QYB礼包</p>
+                <p class="packet-slogan">{{data.luckymoney.comment}}</p>
+            </div>
+            {% if data.status==0 %}
+            <section class="redpacket-info" >
+                <p class="act-number">{{data.yours}}<span>QYB</span></p>
+                <p class="redpacket-info-warning">请于24小时内在粽子钱包完成提取，过期将退回</p>
+            </section>
+            {% elif data.status==2 %}
+            <section class="redpacket-info" >
+                <p class="act-number">{{data.yours}}<span>QYB</span></p>
+                <p class="redpacket-info-warning">请于24小时内在粽子钱包完成提取，过期将退回</p>
+            </section>
+            {% elif data.status==3 %}
+            <section class="redpacket-late" style="display: none;"><p>来晚了，礼包已领完~</p></section>
+            <section class="redpacket-out" ><p>该礼包已过期~</p></section>
+            {% elif data.status==4 %}
+            <section class="redpacket-late" ><p>来晚了，礼包已领完~</p></section>
+            <section class="redpacket-out" style="display: none;"><p>该礼包已过期~</p></section>
+            {% else %}
+
+            {% endif %}
+            <section>
+                <div class="redpacketlist">
+                    <div class="redpacketlist-title">{% if data.status==3 %}该礼包已过期{% endif %} 已领取 {{data.luckymoney.quantity-data.luckymoney.surplusQuantity}}/{{data.luckymoney.quantity}}</div>
+                    <div class="redpacketlist-content">
+                        {% for item in data.luckymoney.items %}
+                        <div class="item">
+                            <img src="{{item.headimgurl}}" class="item-img-url">
+                            <div class="item-name-date">
+                                <div class="name">{{item.nickname}}</div>
+                                <div class="date">{{item.createOn}}</div>
+                            </div>
+                            <div class="item-num">
+                                <div class="num">{{item.amount}} QYB</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+            <section class="redpacket-rule"><p class="rule-title">礼包领取规则</p>
+                <ul>
+                    <li class="rule-item">点击领礼包；</li>
+                    <li class="rule-item">安装粽子钱包，并绑定该微信；</li>
+                    <li class="rule-item">在粽子钱包里点击菜单-礼包管理-我的礼包，查看待领取的礼包；</li>
+                    <li class="rule-item">在我收到的礼包里，点击领取，即可将礼包金额转到自己的本地钱包地址里；</li>
+                    <li class="rule-item">收到的礼包，如果24小时内没有在粽子里领取，礼包将失效，金额自动退回；</li>
+                    <li class="rule-item">同一个礼包，每人只能领取一次。</li>
+                </ul>
+            </section>
+            <div class="alert" style="display: none;">
+
+            </div>
+    </div>
+</div>
+<script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://huodong.goopal1.com/dep/jquery-1.7.2.min_85a54b.js"></script>
+<div id="compToast" class="comp-toast">
+    <div class="toast-wrapper"><!----> 
+        <span class="toast-text"></span>
+    </div>
+</div>
+</body>
+</html>
