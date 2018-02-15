@@ -33,7 +33,7 @@ var config = {
   wechatConfig:{
     //set your oauth redirect url, defaults to localhost
     //"wechatRedirectUrl": "http://luckymoney.let5see.xyz/bws/api/luckymoney/scramble/",
-    "wechatRedirectUrl": "http://api.qyb.chainclub.one/bws/api/wxlogin/callback/",
+    "wechatRedirectUrl": "http://api.qyb.chainclub.one/bws/api/wxlogin/callback",
     //"wechatToken": "wechat_token", //not necessary required
     //"appId": "wxf113fb4694aa7496",
     //"appSecret": "d8ed1f49fd2afd3f625c23b0bb305622",
