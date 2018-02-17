@@ -116,5 +116,12 @@ var config = {
   //  api_user: xxx,
   //  api_key: xxx,
   // });
+  rpc: {
+      user: 'bitcoin',
+      pass: 'local321',
+      host: 'localhost',
+      protocol: 'http',
+      port: 8332
+  }
 };
 module.exports = config;
